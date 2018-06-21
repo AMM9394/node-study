@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>布局-左侧高度等于右侧</title>
+  <style>
+    div{
+      border: 1px solid black;
+    }
+    /*position*/
+    /*.left{
+      height: 100%;
+      width: 100px;
+      background: aqua;
+      position: absolute;
+    }
+    .right{
+      width: 300px;
+      margin-left: 110px;
+      background: antiquewhite;
+    }
+    .parent{
+      position: relative;
+    }*/
+    /*margin负值*/
+   /*
+   .parent{
+      overflow: hidden;
+    }
+    .left,.right{
+      margin-bottom: -5000px;
+      padding-bottom: 5000px;
+    }
+    .left{
+      float: left;
+      background: aqua;
+    }
+    .right{
+      float: right;
+      background: antiquewhite;
+    }*/
+    /*flex布局*/
+    .parent{
+      display: flex;
+      display: -webkit-flex;
+      display: -o-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      align-items: stretch;
+    }
+    .left{
+      background: aqua;
+    }
+    .right{
+      margin-left: 110px;
+      background: antiquewhite;
+    }
+  </style>
+</head>
+<body>
+  <div class="parent">
+    <div class="left"> left </div>
+    <div class="right">
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      ddddddddddddddddddddddd
+    </div>
+  </div>
+  <!--<input type="button" value="dddddd" onclick="alert('ggggggggggggggg')">-->
+</body>
+</html>
