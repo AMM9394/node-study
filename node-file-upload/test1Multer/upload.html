@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>file-upload-test</title>
+</head>
+<body>
+	<div class="single">
+		<p>单个文件上传</p>
+		<input type="file" name="singleFile" id="singleFile">
+		<button class="submit">上传</button>
+	</div>
+	<div class="multer">
+		<p>多个文件上传</p>
+		<input type="file" name="multerFile" id="multerFile">
+		<button class="submit">上传</button>
+	</div>
+
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+	<script>
+    $('.single .submit').on('click',function(){
+      var fileList = $('#singleFile')[0].files;
+      console.log(fileList);
+      var formData = new FormData();
+      formData.append('singleFile', fileList[0]);
+      $.ajax({
+        url: '/upload/single',
+        type:'post',
+        processData:false,
+        contentType:false,
+        data: formData,
+        success: function(data){
+          console.log(data)
+        }
+      })
+    });
+    $('.multer .submit').on('click',function(){
+      var fileList = $('#multerFile')[0].files;
+      console.log(fileList);
+      var formData = new FormData();
+      for(let i = 0; i < fileList.length; i++){
+        formData.append('multerFile', fileList[i]);
+      }
+      $.ajax({
+        url: '/upload/multer',
+        type:'post',
+        processData:false,
+        contentType:false,
+        data: formData,
+        success: function(data){
+          console.log(data)
+        }
+      })
+    });
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>webkitdirectory</title>
+	<link href="https://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.css" rel="stylesheet">
+
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+
+</head>
+<body>
+	<!--<a>
+		上传文件夹
+		<form class="form-horizontal" role="form" id="fileUploadForm" action="/upload/multer" name="fileUploadForm" method="post" enctype="multipart/form-data">
+			<div class="form-group">
+				&lt;!&ndash;<img src="addFoder2.jpg" />&ndash;&gt;
+				<input title="点击选择文件夹" id="fileFolder" name="fileFolder" type="file" multiple webkitdirectory><span id="msg" style="color:#F00"></span>
+			</div>
+		</form>
+
+	</a>-->
+	<div style="text-align: center;padding-top: 50px">
+		<p>点击➕上传文件夹</p>
+		<a data-menu-id="b-menu1" class="g-button-menu  upload-wrapper"
+		   style="background:#e0e0e0;display: block;width: 150px;height: 200px;margin: 0 auto;font-size: 150px;">➕
+			<form class="h5-uploader-form" action="">
+				<input title="点击选择文件夹" id="h5Input2" multiple=""
+				       webkitdirectory="" accept="*/*" type="file" name="html5uploader"
+				       style="position:absolute;opacity:0;top:0;left:0;width:100%;height:100%;cursor:pointer;">
+			</form>
+		</a>
+	</div>
+
+
+	<!--<button type="button" class="btn btn-primary" id="subButton" onclick="">点击上传文件夹</button>-->
+
+	<!--style="background: url('addFoder2.jpg');display:block;width: 512px;height: 512px;">上传文件夹-->
+
+	<!--<script>
+    //页面提示信息
+
+    var	msg;
+    //文件数量限制
+    var filesCount=2000;
+    //文件夹大小限制 2000M
+    var filesSize=2147483648;
+    //实际的文件数量
+    var actual_filesCount=0;
+    //实际的文件夹大小
+    var actual_filesSize=0;
+
+    function commit(){
+      //判断是否选中文件夹
+      var file=$("#fileFolder").val();
+      if(file==''){
+        $("#msg").text('请选择要上传的文件夹');
+        return;
+      }
+
+
+
+      $("#fileUploadForm").submit();
+
+    }
+
+
+
+    document.getElementById('fileFolder').onchange = function(e) {
+
+      //判断是否选中文件
+      var file=$("#fileFolder").val();
+      if(file!=''){
+        $("#msg").text('');
+      }
+      var files = e.target.files; // FileList
+      //文件数量
+      actual_filesCount = files.length;
+      if(actual_filesCount > filesCount){
+        $("#msg").text("文件过多，单次最多可上传"+filesCount+"个文件");
+        return;
+      }
+      for (var i = 0, f; f = files[i]; ++i){
+        actual_filesSize += f.size;
+        if(actual_filesSize > filesSize){
+          $("#msg").text("单次文件夹上传不能超过"+filesSize/1024/1024+"M");
+          return;
+        }
+      }
+    };
+
+
+
+	</script>-->
+</body>
+</html>
