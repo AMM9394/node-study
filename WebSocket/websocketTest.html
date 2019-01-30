@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>websocket</title>
+  <script>
+    var ws = new WebSocket('ws://localhost:8080');
+    ws.onopen = function () {
+      console.log('ws onopen');
+      ws.send('from client: hello');
+    };
+    ws.onmessage = function (e) {
+      console.log('ws onmessage');
+      console.log('from server: ' + e.data);
+    };
+  </script>
+</head>
+<body>
+<div>test</div>
+<div>test</div>
+<div>test</div>
+<div>test</div>
+<div>test</div>
+<div>test</div>
+<div>test</div>
+<div>test</div>
+<div>test</div>
+<div>test</div>
+<div>test</div>
+<div>test</div>
+<div>test</div>
+<div>test</div>
+<div>test</div>
+<div>test</div>
+<div>test</div>
+<div>test</div>
+<div>test</div>
+<div>test</div>
+<div>test</div>
+<div>test</div>
+<div>test</div>
+<div>test</div>
+<div>test</div>
+<div>test</div>
+<div>test</div>
+<div>test</div>
+<div>test</div>
+<div>test</div>
+<div>test</div>
+<div>test</div>
+<div>test</div>
+<div>test</div>
+<div>test</div>
+<div>test</div>
+<div>test</div>
+<div>test</div>
+</body>
+</html>
